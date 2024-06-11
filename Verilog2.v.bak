@@ -1,0 +1,47 @@
+always@(posedge clk or posedge BTN0)
+begin
+if(BTN0)
+begin 
+gp<=1;end 
+else if(counter2==0)
+begin
+gp<=0;
+end
+end
+
+always@(posedge cp )
+begin
+counter2<=counter1;
+if(gp==1)
+begin 
+counter2<=counter2-1;
+end
+end
+
+always@(posedge BTN1 or posedge BTN2 or posedge BTNR)
+begin
+if(BTNR)
+	begin
+		counter1<=0;
+		shi<=0;
+		ge<=0;
+		ye<=0;
+	end
+	else
+	if(BTN1)
+	
+	begin
+	ye<=1;
+	if(counter== 99)
+	begin counter<=0;end
+	else
+	begin counter<=counter+1;end
+	end 
+	else if(BTN2)
+	begin 
+	ye<=1;
+	if(counter== 99)
+	begin counter<=0;end
+	else
+	begin counter<=counter+10;end
+	end 

@@ -1,0 +1,11 @@
+Fitter Status : Successful - Wed Mar 15 01:07:43 2023
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : zhaguo
+Top-level Entity Name : zhaguo
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 667 / 1,270 ( 53 % )
+Total pins : 57 / 116 ( 49 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

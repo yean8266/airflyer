@@ -1,0 +1,42 @@
+module daojishi(counter,daoshu,BTN0,clk);
+input counter;
+input BTN0;
+input clk;
+
+output daoshu;
+reg [1:0]cp;
+reg [1:0]ap;
+wire daoshu;
+reg [5:0]daoshu1;
+
+initial
+begin
+ap<=0;
+cp<=1;
+daoshu1<=counter;
+end
+assign daoshu = daoshu1;
+
+
+always@(posedge clk or posedge BTN0)
+begin
+if(BTN0)
+begin 
+ap<=1;end else if(daoshu1==0)
+begin
+ap<=0;
+end
+end
+
+always@(posedge cp)
+begin
+if(ap)
+begin 
+daoshu1=daoshu1-1;
+end
+end
+
+
+
+division division0(.clk(clk),.clk_out(cp));
+endmodule
